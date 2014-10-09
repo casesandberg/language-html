@@ -430,9 +430,12 @@
         'include': '#entities'
       }
     ]
+  'tag-class-attribute':
+    'match': '(?<=[^=])\\b((class)+)'
+    'name': 'entity.other.attribute-name.class.html'
   'tag-generic-attribute':
-    'match': '(?<=[^=])\\b([a-zA-Z0-9:-]+)'
-    'name': 'entity.other.attribute-name.html'
+      'match': '(?<=[^=])\\b([a-zA-Z0-9:-]+)'
+      'name': 'entity.other.attribute-name.html'
   'tag-id-attribute':
     'begin': '\\b(id)\\b\\s*(=)'
     'captures':
@@ -491,6 +494,9 @@
     'patterns': [
       {
         'include': '#tag-id-attribute'
+      }
+      {
+        'include': '#tag-class-attribute'
       }
       {
         'include': '#tag-generic-attribute'
