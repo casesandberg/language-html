@@ -433,6 +433,9 @@
   'tag-class-attribute':
     'match': '(?<=[^=])\\b((class)+)'
     'name': 'entity.other.attribute-name.class.html'
+  'tag-rel-attribute':
+    'match': '(?<=[^=])\\b((rel)+)'
+    'name': 'entity.other.attribute-name.rel.html'
   'tag-generic-attribute':
       'match': '(?<=[^=])\\b([a-zA-Z0-9:-]+)'
       'name': 'entity.other.attribute-name.html'
@@ -497,6 +500,9 @@
       }
       {
         'include': '#tag-class-attribute'
+      }
+      {
+        'include': '#tag-rel-attribute'
       }
       {
         'include': '#tag-generic-attribute'
